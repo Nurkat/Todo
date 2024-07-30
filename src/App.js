@@ -1,14 +1,17 @@
 import './App.css';
-import Todo from './components/Todo/Todo';
+import TodoList from './components/Todolist';  
+import TodoForm from './components/Todoform';
+import { useState } from 'react';
+
+
 
 function App() {
+
   return (
     <>
-      <Todo/>
-      
-
+      <TodoForm/>
+      <TodoList/>
     </>
-    
   );
 }
 
