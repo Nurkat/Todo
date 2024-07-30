@@ -12,7 +12,7 @@ function saveTodo(obj){
        
 }
 function deleteTodo(id){
-    const findedIndex = todos.findedIndex(item => item.id == id)
+    const findedIndex = todos.findIndex(item => item.id == id)
     todos.splice(findedIndex, 1)
     setTodos([...todos])
     
