@@ -11,10 +11,10 @@ function TodoList() {
  function updateTodoBtnClick(id){
     setUpdateId(id)
     setIsOpenModal(true)
-    const updateobj = todos.find(item => item.id ==id)
+    const updateobj = todos.find(item => item.id === id)
     setUpdateInpValue(updateobj.title)
  }
-function updateFormSubmit(){
+function updateFormSubmit(e){
     e.preventDefault()
     updateTodo(updateid,updateInpValue)
     setIsOpenModal(false)
@@ -24,7 +24,7 @@ function updateFormSubmit(){
         <>
         <ul className="flex flex-col gap-5 mx-auto mt-5 w-[650px]"> 
         {todos.map((item,index)=>(
-            <li className="bg-gray-700 p-2 rounded-lg text-white flex justify-between">
+            <li key={index} className="bg-gray-700 p-2 rounded-lg text-white flex justify-between">
                <div>
                <span>{index + 1}</span>.
                <strong>{item.title}</strong>
